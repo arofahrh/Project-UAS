@@ -76,14 +76,38 @@
         main()
 
   ## penjelasan kode program :
-1. Modul Data.
+1. Modul Data,
    tujuan : class user ini digunakan untuk membuat objek yang menyimpan informasi tentang seorang pengguna.
    - _init_ method 
 	  ini adalah konstruktor yang akan dijalankan setiap kali kita membuka objek user. Di sini,
     menyimpan 4 data yaitu : name, age, favorite_series, dan favorite_movie.
 	- _str_ method : method ini digunakan untuk mengubah objek menjadi format string. Jadi, saat kita ingin menampilkan data pengguna,
    program akan memanggil method ini dan menampilkan informasi pengguna format yang rapi. 
-2. 
+2. Modul view,
+   Tujuan: class view ini mengatur input dan output, berfungsi untuk berinteraksi dengan pengguna.
+  - Display_table method: ini digunakan untuk menampilkan data pengguna dalam bentuk tabel.
+    Dimulai dengan menampilkan header tabel dan kemudian menampilkan setiap pengguna yang ada dalam list users.
+  - Get_user_input :  ini digunakan untuk meminta input dari pengguna. Pengguna diminta memasukkan nama, usia, seri favorit, dan film favorit.
+    Jika ada kesalahan dalam memasukkan usia (misalnya memasukkan string alih-alih angka), program akan menampilkan pesan error.
+3. Modul process, 
+   Tujuan : mengelola logika pemrosesan data pengguna, seperti validasi usia dan pembuatan objek user.
+  - Create_user :  ini adalah method statis (ini tuh artinya bisa dipanggil tanpa perlu membuat objek process) nah ini yang menerima input nama, usia, seri favorit, dan 
+    film favorit. Jika usia yang dimasukkan negatif, program akan menampilkan pesan error. Jika valid, method ini akan mengembalikan objek user.
+4. Modul main, 
+   Tujuan : adalah bagian utama dari program yang mengatur alur kerja.
+   - Process pengumpulan data : program akan terus meminta input pengguna hingga pengguna memilih untuk berhenti.
+     Input pengguna akan diproses untuk membuat objek user dan ditambahkan ke list users.
+   - Handling error : terjadi error (misalnya usia negatif atau input usia yang bukan angka), program akan menangani exception tersebut dan memberi tahu pengguna dengan 
+     pesan error yang sesuai.
+   - Tanya Pengguna untuk Input Berikutnya: Setelah satu pengguna selesai dimasukkan, program akan menanyakan apakah pengguna ingin menambah data lain.
+     Jika jawabannya "y", maka input akan diminta lagi; jika "n", program akan berhenti.
+   - Menampilkan Data: Setelah semua data dimasukkan, program akan menampilkan tabel yang berisi semua data pengguna yang telah dimasukkan.
+   - Bagian main
+     Tujuan: Bagian ini memastikan bahwa main() hanya dijalankan jika program dijalankan langsung, bukan jika diimpor sebagai modul di program lain.
+
+
+
+
         
 
 
